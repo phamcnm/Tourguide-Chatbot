@@ -1,5 +1,66 @@
 # Koffee the Tour Guide
 
+### Co-Authors
+ Yuting Su and Minh Pham
+
+## Samples
+    (NAMED ENTITTY RECOGNITION)
+    Koffee: Hi I'm Koffee, your tour guide for today. Welcome to Carleton! What's your name?  
+    You:    I'm PJ.
+    Koffee: So sorry, but I didn't catch your name. What is your name again? Perhaps give me your full      
+            name? 
+    You:    Sukrit Sangvong 
+    Koffee: Nice to meet you Sukrit Sangvong! 
+    Koffee: What's your prospective major? or what are the things you enjoy doing? 
+    You:    Maybe CS. I like programming a lot.
+    Koffee: Awesome! Computer Science sounds like a good fit for you. Let's start our tour at Olin, 
+            follow me! 
+            
+    (ELIZA TRANSFORMATION)
+    Koffee: Is hot dog a sandwich? 
+    You:    I don't know. I don't eat hot dog.
+    Koffee: Do you like to know? 
+    You:    Yes. Is it a sandwich?
+    Koffee: Do you like to be? 
+    You:    I don't think so.
+    Koffee: Do you like to think? 
+    
+    (SENTIMENTAL ANALYSIS)
+    You:    Ahhhh. Yeaa
+    Koffee: You are speaking facts.
+    ...
+    Koffee: How is the tour so far? 
+    You:    I like it. It is awesome!    
+    Koffee: I like what you are saying! 
+    
+    (KEYPHRASE TRIGGER)
+    Koffee: Any Question? 
+    You:    How's the workload at Carleton?
+    Koffee: Hmmmm for workload, I think it depends. The workload for 6 credits classes are generally 
+            big, and people usually take 18 credits per term. But if you think you are too busy or too 
+            free during one of the terms, you can always choose to uderload or overload. 
+    Koffee: We are heading towards Libe. 
+    
+    (CONTEXT FREE GRAMMAR)
+    Koffee: This building may interest you! It is a building for Computer Science. 
+    Koffee: Welcome to Olin Hall! This building just got renovated and just opened for students to 
+            use in Fall 2020. The building is the third science building at Carleton and is fully connected 
+            to Anderson on all three floors. 
+    Koffee: There is a huge Student Lounge on the thrid floor that takes up almost the entire length 
+            of the building. It is a space for computer science students to work on homework, but it 
+            is also opened for any students to come and work as well. There are a lot of labs scatter 
+            on all the floors, including the underground floor. The labs included Psychology labs, 
+            GIS labs, and a lot of computer labs. 
+    Koffee: There is not a particular office in this building. However, faculties for CS, Psychology, 
+            and Physics and Astronomy all have their offices in this building, so if you need to come 
+            to office hours or just say hi to your professors from any of these departments, this is 
+            the building. 
+    
+## How To Run
+
+ 1. Run `./setup` to install all the dependencies
+ 2. Run `python3 koffee.py` and start chatting!
+    
 ## Goals
 
 1. Koffee will bring the user to 3 buildings.
