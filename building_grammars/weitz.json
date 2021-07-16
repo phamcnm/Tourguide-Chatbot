@@ -1,0 +1,40 @@
+{
+	"introduction": [
+		"Ok after a LONG walk, we finally get to the Weitz! This is the southmost and the westmost academic building of the campus."
+	],
+	"majors": [
+		"In this building, the performance related departments, such as Music, Dance, and Theatre, are located here. The Cinema and Media Studies (CAMS) department is here too."
+	],
+	"features": [
+		"#feature1# #feature2#",
+        "#feature1# #feature3#",
+        "#feature1# #feature4#",
+        "#feature2# #feature1#",
+        "#feature2# #feature3#",
+        "#feature2# #feature4#",
+        "#feature3# #feature1#",
+        "#feature3# #feature2#",
+        "#feature3# #feature4#",
+        "#feature4# #feature1#",
+        "#feature4# #feature2#",
+        "#feature4# #feature3#"
+	],
+	"feature1": [
+		"There are a lot of cool spots in this building. What you see when you enter through the main entrance is a huge common space where people usually have casual meetings, grab a quick lunch, film some videos or just hang out."
+	],
+	"feature2": [
+		"Across from the main entrace, we have the Weitz Cafe where you can get some snacks, sandwitches, soup, and other drinks."
+	],
+	"feature3": [
+		"Right next to the cafe, it is my favorate place in this building! The KRACUM Performance Hall! This hall is where all the big music performances happen, such as the Orchestra concerts, the Lunar New Year Festival, and even Acapella concerts! It has great acousitic and sound system in the hall and also super cool lightings!"
+	],
+	"feature4": [
+		"We also have two dance studios and the large one can be used for dance performances too."
+	],
+    "offices": [
+		"Since the Music and CAMS departments are in Weitz, the offices for borrowing music and filming related stuff are here too. The Music Resource Center is where you can borrow instruments and music scores. You can get all filming equipments from PEPS."
+    ],
+    "funFact": [
+		"This building used to be a middle school!!!"
+    ]
+}

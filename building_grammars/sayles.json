@@ -1,0 +1,40 @@
+{
+	"introduction": [
+		"Welcome to Sayles, a social hub on campus. This is the place where students come to hangout with their friends to study, play, and eat!"
+	],
+	"majors": [
+		"Sayles serves some very good food! They have great burger and quesadilla. Student normally come here to order food really late at night!"
+    ],
+	"features": [
+		"#feature1# #feature2#",
+        "#feature1# #feature3#",
+        "#feature1# #feature4#",
+        "#feature2# #feature1#",
+        "#feature2# #feature3#",
+        "#feature2# #feature4#",
+        "#feature3# #feature1#",
+        "#feature3# #feature2#",
+        "#feature3# #feature4#",
+        "#feature4# #feature1#",
+        "#feature4# #feature2#",
+        "#feature4# #feature3#"
+	],
+	"feature1": [
+		"Sayles has theGreat Space with 24 hour space with computer lab, study tables, pool and foosball tables, big screen TV, couches, café"
+	],
+	"feature2": [
+		"The bookstore is right here (Prospies get a discount), well it's accessible online!"
+	],
+	"feature3": [
+		"The Post Office is right around the corner. Mailboxes don’t lock as a symbol of campus trust"
+	],
+	"feature4": [
+		"'The Clap' student publication is distributed outside every Friday. Anyone can submit anything as long as their name is attached to it—a fun representation of campus creativity"
+	],
+    "offices": [
+    	"Burton dining hall is right below Sayles! You can also eat here at Sayles cafe. The burger here is great!"
+    ],
+    "funFact": [
+    	"Firday Flowers! Every Friday people buy flowers from local florists and give them to friends. It's lovely."
+    ]
+}

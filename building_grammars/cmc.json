@@ -1,0 +1,31 @@
+{
+    "introduction": [
+        "Here we are at the CMC, or Center of Mathematics and Computing."
+    ],
+    "majors": [
+        "Mathematics and Statistics departments are using the building."
+    ],
+    "features": [
+        "#feature1# #feature2#",
+        "#feature1# #feature3#",
+        "#feature2# #feature1#",
+        "#feature2# #feature3#",
+        "#feature3# #feature1#",
+        "#feature3# #feature2#"
+    ],
+	"feature1": [
+        "On the second and thrid floors, there is the Math Skill Center where students can come and work on their Maths or Stats homeworks. During the day, there will be student workers who are hired to help other students on Maths and Stats homeworks. It is a great place for studying and working on Maths related topics."
+    ],
+    "feature2": [
+        "Each floor has a lot of faculty offices under Mathematics and Statistics departments, so you can just walk to your professor's office if you happen to have any questions on what you are working on."
+    ],
+    "feature3": [
+        "There are a lot of classrooms in this building, and they are opned for students use if no class is taking place. You can basically have the entire class for your own if no one is using them."
+    ],
+    "offices": [
+        "On the first floor, there is the ITS helpdesk student workers that you can come to get your computer repaired for free! You can also come contact them for tech supports or anything related to technology."
+    ],
+    "funFact": [
+        " Fuc fact! the Computer Sceience department just moved out of the CMC to Olin Hall on 2020, so there is no \"Computing\" in this Center of Mathematics and Computin anymore."
+    ]
+}

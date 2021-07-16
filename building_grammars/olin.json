@@ -1,0 +1,44 @@
+{
+    "introduction": [
+        "Welcome to Olin Hall! This building just got renovated and just opened for students to use in Fall 2020. The building #locationPerk# and #locationPerk#."
+    ],
+    "locationPerk": [
+        "is fully connected to Anderson on all three floors",
+        "is the third science building at Carleton"
+    ],
+    "majors": [
+        "There are three main departments in this building. Psychology has the first floor. Physics and Astronomy has the second floor. Last but not least, Computer Science has the third floor."
+    ],
+    "features": [
+        "#feature1# #feature2#",
+        "#feature1# #feature3#",
+        "#feature1# #feature4#",
+        "#feature2# #feature1#",
+        "#feature2# #feature3#",
+        "#feature2# #feature4#",
+        "#feature3# #feature1#",
+        "#feature3# #feature2#",
+        "#feature3# #feature4#",
+        "#feature4# #feature1#",
+        "#feature4# #feature2#",
+        "#feature4# #feature3#"
+    ],
+    "feature1": [
+        "On the first floor, at the very end of the hallway is one of the biggest lecture halls we have on campus. Since the average class size here at Carleton is 16 and 2/3 of all the classes have fewer than 18 students, the lecture hall this size is very rare."
+    ],
+    "feature2": [
+        "There are a lot of labs scatter on all the floors, including the underground floor. The labs included Psychology labs, GIS labs, and a lot of computer labs."
+    ],
+    "feature3": [
+        "This building has a lot of study rooms. The study rooms in this building are small rooms that can hold 3-6 people. Most of the rooms also have a whiteboard, so they are great for working spots on group works."
+    ],
+    "feature4": [
+        "There is a huge Student Lounge on the thrid floor that takes up almost the entire length of the building. It is a space for computer science students to work on homework, but it is also opened for any students to come and work as well."
+    ],
+    "offices": [
+        "There is not a particular office in this building. However, faculties for CS, Psychology, and Physics and Astronomy all have their offices in this building, so if you need to come to office hours or just say hi to your professors from any of these departments, this is the building."
+    ],
+    "funFact": [
+        "While this building was renovating, students could not walk through Anderson-Olin intersection to get to another part of the campus, so everyone had to walk around Anderson, Hulings, and Olin to get to the other side. It was not fun in the Winter!"
+    ]
+}

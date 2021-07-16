@@ -1,0 +1,160 @@
+{
+    "neturalResponse": [
+        "I see.",
+        "#wow#That is very interesting!",
+        "Fair enough!",
+        "I know what you mean."
+    ],
+    "wow": [
+        "Wow! ",
+        "Awesome! ",
+        "Cool! "
+    ],
+    "verySubjective": [
+        "You really do have strong opinions.",
+        "Alright, I see you.",
+        "Wow big thoughts!"
+    ],
+    "veryObjective": [
+        "So true. Can't argue.",
+        "Yep that is right.",
+        "You are speaking facts.",
+        "Big yep!"
+    ],
+    "veryPositive": [
+        "#wow#I'm #happy# to hear this.",
+        "That's #awesome#!",
+        "I #love# what you are saying!"
+    ],
+    "happy": [
+        "#superOptional# happy",
+        "#superOptional# glad"
+    ],
+    "awesome": [
+        "awesome",
+        "great",
+        "wonderful",
+        "amazing",
+        "unbelieveable"
+    ],
+    "love": [
+        "like",
+        "love"
+    ],
+    "superOptional": [
+        "",
+        "super",
+        "very"
+    ],
+    "veryNegative": [
+        "I'm sorry to hear that.",
+        "I feel bad, my friend.",
+        "#sad# to hear, hope things will #improve#.",
+        "Can you please spread some more negativity I need it.",
+        "Gee thanks. I wanted to hear that."
+    ],
+    "sad": [
+        "Sad",
+        "Sorry"
+    ],
+    "improve": [
+        "improve",
+        "get better"
+    ],
+    "profanityResponse": [
+        "Language!",
+        "We don't say that hear!",
+        "Wo! Mind your language"
+    ],
+    "winterFunFact": [
+        "It is our tradition for students to steal food trays from our dinning hall and use them to snow slide at the hill behind Myers! It is a very fun tradition for our winter!"
+    ],
+    "polarVortexFunFact": [
+        "Being a leading college in academic, Carleton decided to not close down the school even though it was -56 outside! Our college president at the time sent students an email that, instead of stopping classes, they will be giving out each student a bowl of warm chiken broth at Sayles! It was a huge meme at the time."
+    ],
+    "sprintFunFact": [
+        "At Carleton, we have a Spring Concert, an all-day music festival where there are great music and free food! It is a great tradition to have after our long winter."
+    ],
+    "funFactIntro": [
+        "Speaking of",
+        "Since you talked about",
+        "About",
+        "Well, since you brought up",
+        "Well, I have a fun fact about"
+    ],
+    "funFactBuildingIntro": [
+        "Speaking of",
+        "Here's a fun fact of",
+        "Well, I have a fun fact about",
+        "Woo I have to tell you a fun fact of"
+    ],
+    "nextToYou": [
+        "Next to you is the",
+        "We are walking passed the",
+        "Now you can see the",
+        "Here is the",
+        "While you are walking, you can see the"
+    ],
+    "baldSpotStory": [
+        "#nextToYou# Bald Spot! It is the center of our campus. #baldSpotFact#"
+    ],
+    "baldSpotFact": [
+        "During winter, this space will be turned into an ice rinks where students can go ice skating or play broomball!",
+        "Every fall, new students “become” Carls when they toss their new Frisbees into the center of the bald spot at the same time!",
+        "Recently Carleton dug geothermal wells into the Bald Spot and Mini-Bald Spot to generate energy. We are planning to target net zero campus emissions by 2050."
+    ],
+    "careerCenterStory": [
+        "#nextToYou# Career Center! #careerCenterFact#"
+    ],
+    "careerCenterFact": [
+        "This is a place that helps you with with internships, jobs, grad school, test taking: including resumes, interview prep, career counseling, cover letter help, finding jobs/internships!",
+        "There are over 300 externships(Short internships over 6 week winter break with Carleton alumni and/or parents) offered every year!"
+    ],
+    "chapelStory": [
+        "#nextToYou# Chapel! The Chapel is the center for religious and spiritual life on campus. #chapelFact#"
+    ],
+    "chapelFact": [
+        "Architecturally interesting that the Chapel faces the town, instead of the Bald Spot. It’s built this way because the college wanted to symbolize Carleton’s relationship with the community.",
+        "About 50% of the student body claims a religious affiliation when they come into Carleton, almost every religion of the world is represented here.",
+        "The Chapel hosts weekly Christian, Jewish, Muslim and Buddhist services and events, plus a weekend Chapel service of different traditions or interfaith."
+    ],
+    "otherFunfacts": [
+        "2010-2012 Carleton held the world record for most people spooning simultaneously, was won on the Bald Spot with 529 students (More than ¼ of the student body)",
+        "We have silent dance parties at the end of Fall and Spring Terms. Students usually download the same playlist, meet in first libe, and press play simultaneously, dancing through the libe and other buildings.",
+        "We have cute weekly events called Friday Flowers where you can buy flowers at Sayles and put it into your friends' mailbox. It is just really heartwarming when you see there are flowers sitting in your mailbox on Fridays."
+    ],
+    "farewell": [
+        "Alright then, that's it for our tour today. Again, I hope you enjoyed the tour and have a great day!",
+        "Thanks again for joining us in the tour! If you have any other questions, feel free to reach out to our admission office! Have a great day!",
+        "And now, our tour will end here. It is truly a please to meet you all and I hope you learnt more about Carleton today. Have a great rest of the day!"
+    ],
+    "internet": [
+        "We do have eduroam just like all the other schools in the U.S. It is a pretty stable and secure network, although it was down a few times last winter due to weather or fluid."
+    ],
+    "core curriculum": [
+        "Yes Carleton does have a core curriculum which I actually like. I think it kinda pushed me to build up skils which I found out pretty useful while applying to jobs and grad schools."
+    ],
+    "workload": [
+        "Hmmmm for workload, I think it depends. The workload for 6 credits classes are generally big, and people usually take 18 credits per term. But if you think you are too busy or too free during one of the terms, you can always choose to uderload or overload."
+    ],
+    "trisemester": [
+        "I really love the trisemester system because you get to have a long winter break!"
+    ],
+    "career": [
+        "As for career planning or related stuff, we have Career Center to help you. I did not use it very much personally, but I also know friends who were benefited a lot."
+    ],
+    "food": [
+        "Haha, I mean dining hall food in any places is probably similar. I am fine with the dining hall food, they are really good sometimes. We also have Sayles Cafe and a lot of nice restaurants in town!"
+    ],
+    "getGoing": [
+        "Okay, let's move on!",
+        "Alright, we will continue our tour then!",
+        "If there is no question, we will be moving on then!",
+        "Feel free to ask question anytime!"
+    ],
+    "nextDestination": [
+        "Our next destination is",
+        "Let's move on to",
+        "We are heading towards"
+    ]
+}
