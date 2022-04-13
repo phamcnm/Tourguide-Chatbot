@@ -1,3 +1,13 @@
+'''
+markov_run.py
+
+The Statistical language model, using markov chain 
+to generate new sentences based on data of quotes
+
+@author: Yuting, PJ, and Minh
+@date: 05/14/2021
+'''
+
 import random
 import re
 import sys
@@ -193,7 +203,8 @@ class SLM:
 		The chunk size can be provided to create a z_score_estimator out of this
 
 		Parameters:
-			p (optional): a number between 0 and 100 representing how much of the corpus            should be trained from the beginning
+			p (optional): a number between 0 and 100 representing how much of 
+						  the corpus should be trained from the beginning
 			chunck_size (optional): the chunk size for the z score estimator
 		"""
 		# if token_list is empty, calculate and record the tokenized_list

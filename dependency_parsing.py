@@ -1,4 +1,13 @@
-# functions for the dependecy parsing section
+'''
+dependency_parsing.py
+
+functions for the dependecy parsing, which is a method
+to parse natural language sentences into parts that
+depend on each other in natural language grammars
+
+@author: Yuting, PJ, and Minh
+@date: 05/14/2021
+'''
 import spacy
 
 def find_verb_chunk(doc):

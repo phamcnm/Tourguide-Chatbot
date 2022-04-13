@@ -1,3 +1,13 @@
+'''
+building.py
+
+This building class stores information about the Carleton buildings
+It gets that from json files in the building_grammars folder
+
+@author: Yuting, PJ, and Minh
+@date: 05/14/2021
+'''
+
 from grammar import *
 import json 
 

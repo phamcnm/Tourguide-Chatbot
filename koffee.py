@@ -1,8 +1,32 @@
-# koffee.py
-# the main file for the chatbot's tour of Carleton College
-#
-# @author: Yuting, PJ, and Minh
-# @date: 05/14/2021
+'''
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////                                                                                                  ///////
+///////                                                                                                  ///////
+///////                                                                                                  ///////
+///////       KK       KK       OOOOO        FFFFFFFFFFF   FFFFFFFFFFF   EEEEEEEEEEE   EEEEEEEEEEE       ///////
+///////       KK     KK       O       O      FF            FF            EE            EE                ///////
+///////       KK   KK       OO         OO    FF            FF            EE            EE                ///////
+///////       KK KK        OO           OO   FF            FF            EE            EE                ///////
+///////       KKKK         OO           OO   FFFFFFFFFFF   FFFFFFFFFFF   EEEEEEEEEEE   EEEEEEEEEEE       ///////
+///////       KK KK        OO           OO   FF            FF            EE            EE                ///////
+///////       KK   KK       OO         OO    FF            FF            EE            EE                ///////
+///////       KK     KK       O       O      FF            FF            EE            EE                ///////
+///////       KK       KK       OOOOO        FF            FF            EEEEEEEEEEE   EEEEEEEEEEE       ///////
+///////                                                                                                  ///////
+///////                                                                                                  ///////
+///////                                                                                                  ///////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+koffee.py
+the main file for the chatbot's tour of Carleton College
+
+@author: Yuting, PJ, and Minh
+@date: 05/14/2021
+'''
 
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
@@ -18,7 +42,7 @@ from profanity import profanity
 from textblob import TextBlob
 from dependency_parsing import *
 from markov_run import *
-from Building import *
+from building import *
 from eliza import *
 import random
 import spacy
@@ -53,7 +77,7 @@ majors_building_dict = {
     "": ""
 }
 
-#run-time variables
+# run-time variables
 name = ""
 major = ""
 start_building = ""
@@ -64,22 +88,33 @@ told_funfact = False
 
 
 def print_text_art():
-    dash = "*" * 100
-    text = " 🄺 🄾 🄵 🄵 🄴 🄴 " * 6
-    spaces = " " * len(text)
-    
-    print("\n\n\n")
-    print(dash)
-    print("*{:<10s}{}{:>10s}*".format("", spaces, ""))
-    print("*{:<10s}{}{:>10s}*".format("", text, ""))
-    print("*{:<10s}{}{:>10s}*".format("", text, ""))
-    print("*{:<10s}{}{:>10s}*".format("", text, ""))
-    print("*{:<10s}{}{:>10s}*".format("", spaces, ""))
-    print(dash)
-    print("\n\n\n")
+    print("\n")
+    print("////////////////////////////////////////////////////////////////////////////////////////////////////////")
+    print("////////////////////////////////////////////////////////////////////////////////////////////////////////")
+    print("/////                                                                                              /////")
+    print("/////                                                                                              /////")
+    print("/////                                                                                              /////")
+    print("/////     KK       KK       OOOOO        FFFFFFFFFFF   FFFFFFFFFFF   EEEEEEEEEEE   EEEEEEEEEEE     /////")
+    print("/////     KK     KK       O       O      FF            FF            EE            EE              /////")
+    print("/////     KK   KK       OO         OO    FF            FF            EE            EE              /////")
+    print("/////     KK KK        OO           OO   FF            FF            EE            EE              /////")
+    print("/////     KKKK         OO           OO   FFFFFFFFFFF   FFFFFFFFFFF   EEEEEEEEEEE   EEEEEEEEEEE     /////")
+    print("/////     KK KK        OO           OO   FF            FF            EE            EE              /////")
+    print("/////     KK   KK       OO         OO    FF            FF            EE            EE              /////")
+    print("/////     KK     KK       O       O      FF            FF            EE            EE              /////")
+    print("/////     KK       KK       OOOOO        FF            FF            EEEEEEEEEEE   EEEEEEEEEEE     /////")
+    print("/////                                                                                              /////")
+    print("/////                                                                                              /////")
+    print("/////                                                                                              /////")
+    print("////////////////////////////////////////////////////////////////////////////////////////////////////////")
+    print("////////////////////////////////////////////////////////////////////////////////////////////////////////")
+    print("\n")
 
 
 def koffee_print(string):
+    '''
+    Prints koffee's responses
+    '''
     time.sleep(1.3)
     string_list = string.split(" ")
     charCount = 0
@@ -97,11 +132,14 @@ def koffee_print(string):
 
 
 def user_print():
+    '''
+    Prints UI to prompt user's imputs
+    '''
     return Response(input("You:" + (" "*4)))
 
 
 def remove_symbol_from_string(string):
-     return re.sub(r'[^\w]', '', string)
+    return re.sub(r'[^\w]', '', string)
 
 
 def cap_first_character(string):
@@ -121,6 +159,7 @@ given_spring_fact = False
 winter_keyphrase = {"winter", "cold", "snow"}
 polar_vortex_keyphrase = {"polar", "vortex", "steven", "poskanzer", "steve"}
 spring_keyphrase = {"spring", "music", "tradition"}
+
 def check_keyphrase(response_string):
     """
     Generates fun facts if the given string contains any keyphrase. Will generate at most one funfact per call
@@ -449,6 +488,7 @@ def introduction_conversation():
             name = "friend"
 
     koffee_print("Nice to meet you {}!".format(name))
+
     koffee_print("What's your prospective major? or what are the things you enjoy doing?")
     major_response = user_print()
 
@@ -459,10 +499,18 @@ def introduction_conversation():
     current_building = start_building
 
     if major == "other":
-        koffee_print("You will be encouraged to try many things out at Carleton! Please follow me, our first stop will be at {}".format(cap_first_character(start_building)))
+        koffee_print("You will be encouraged to try many things out at Carleton!")
+        time.sleep(0.4)
+        koffee_print("The whole tour will take around 2 to 4 minutes. I will take you to three very cool buildings.")
+        time.sleep(0.4)
+        koffee_print("Please follow me, our first stop will be at {}".format(cap_first_character(start_building)))
     else:
-        koffee_print("Awesome! {} sounds like a good fit for you. Let's start our tour at {}, follow me!".format(major, cap_first_character(start_building)))
-
+        koffee_print("Awesome! {} sounds like a good fit for you.".format(major))
+        time.sleep(0.4)
+        koffee_print("The whole tour will take around 2 to 4 minutes. I will take you to three very cool buildings.")
+        time.sleep(0.4)
+        koffee_print("Let's start our tour at {}, follow me!".format(cap_first_character(start_building)))
+    
     is_intro = False
 
 

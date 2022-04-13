@@ -1,3 +1,11 @@
+'''
+grammar.py
+Parses and generates grammar for koffee
+
+@author: Yuting, PJ, and Minh
+@date: 05/14/2021
+'''
+
 import json
 import random
 import sys

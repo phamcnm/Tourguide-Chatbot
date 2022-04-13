@@ -64,7 +64,7 @@
 ## Goals
 
 1. Koffee will bring the user to 3 buildings.
-2. Koffee will give at least one funfact. If no funfact is said during the tour, Koffee will give a funfact before it says goodbye.
+2. Koffee will give at least one funfact. If no funfact is said during the tour, Koffee will give a fun fact before it says goodbye.
 
 ## Storyline (in order)
 
@@ -76,25 +76,25 @@ Koffee will ask for a name and a prospective major. If a valid prospective major
 
 ### Transition
 
-In between all the buildings is the transition phrase: a phrase while Koffee and the user are walking towards their destination. During the walk, Koffee will try to engage with the user by making some small talks with the user. After that, for some destinations, Koffee will also point up some important spots that they are walking by: bald spot, career center, and the chapel.
+In between all the buildings is the transition phrase: a phrase while Koffee and the user are walking towards their destination. During the walk, Koffee will try to engage with the user by making small talks with the user. After that, depending on the destinations, Koffee will also point up some important places that they would actually be walking by in real life, such as the bald spot, the career center, and the chapel.
 
 ### Small Talk
 
-In a small talk, Koffee will ask one of the three types of question. The question will either be an eliza question, a sentiment question, or a yes-no question. For the eliza question, Koffee will expect to response with eliza transformation. If it is not possible, it will response based on the sentiment of the string instead. For the sentiment question, Koffee will response based on the sentiment of the string. For the yes-no question, Koffee will look at the dialouge tag of the string. If the tag is a yes tag, Koffee will happily response back with context-free grammar. If the tag is something else, it will response based on sentiment.
+In a small talk, Koffee will ask one of the three types of question. The question will either be an ELIZA question (https://web.njit.edu/~ronkowit/eliza.html), a sentiment question, or a yes-no question. For the eliza question, Koffee will expect to response with eliza transformation. If it is not possible, it will instead respond based on its sentiment analysis of the string. For the sentiment question, Koffee will always respond based on the sentiment of the string. For the yes-no question, Koffee will look at the dialouge tag of the string. If the tag is a yes tag, Koffee will use context-free grammar in its response. If the tag is something else, it will response based on sentiment.
 
-For eliza question, if Koffee is able to response with eliza transformed text, it will wait for the user to type up another response (since our eliza transformations are mostly just asking the question back). If the new response is eliza transformable, it will transform and wait for response again. This will repeat for at most 3 times.
+For eliza question, if Koffee is able to respond with eliza transformed text, it will wait for the user to type up another response (since our eliza transformations are mostly just asking the question back). If the new response is eliza transformable, it will transform and wait for response again. This will repeat for at most 3 times.
 
 Before Koffee asks a question here, there is also a 33% chance that Koffee will bring up a quote that is generated from markov_model.
 
 ### Building (repeat 3 times)
 
-When Koffee reaches the building, it will first check if this building has a major that the user is interesed in. If it does, it will mention that this building might be interesting for the user. After that, Koffee will use context-free-grammar to give a tour to the building. It will call generate on introduction nonterminal and features nonterminal first. Then, it will randomly called another nonterminal based on what nonterminals are left.
+When Koffee reaches the building, it will first check if this building has the department that the user is interesed in. If it does, it will mention that this building might be interesting for the user. After that, Koffee will use context-free-grammar to give a tour to the building. It will call generate on introduction nonterminal and features nonterminal first. Then, it will randomly call another nonterminal based on what nonterminals are left.
 
-After the tour, Koffee will ask the user if the user has any question. If the reply contains a "no" tag, it will keep going, else it will try to look for keywords inside the reply. The keywords are the expected topics of questions that Koffee already has the answer in its grammar. If no keyword is found in the reply, it will tell the user to bring that question to the admission office.
+After the tour, Koffee will ask the user if the user has any questions. If the reply contains a "no" tag, it will keep going, else it will try to look for keywords inside the reply. The keywords are the expected topics of questions that Koffee already has the answer in its grammar. If no keyword is found in the reply, it will refer users to the the admission office.
 
 ### Feedback
 
-Koffee will ask for the feedback of the tour and will response based on the sentiment of the response. If no funfact is given yet, it will be given here.
+Koffee will ask for the feedback of the tour and will respond based on the sentiment of user's input. If no fun fact is given so far, it will be given here.
 
 ### Farewell
 
@@ -104,7 +104,7 @@ Koffee says goodbye.
 
 ### Keyphrase
 
-When each response is being intitailzed, it will check if there is any keyphrase in the response or not. If there is any, Koffee will add in funfact based on the topic. Each topic will only be triggered once for the entire tour.
+When each response is being intitailzed, it will check if there is any keyphrase in the response or not. If there is any, Koffee will add in a fun fact based on the topic. Each topic will only be triggered once for the entire tour.
 
 ### Pickup Major
 

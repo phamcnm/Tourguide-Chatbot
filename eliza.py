@@ -1,4 +1,12 @@
 '''
+eliza.py
+
+ELIZA is an chatbot created from 1964 to 1968.
+https://web.njit.edu/~ronkowit/eliza.html
+
+We learned from the concept that ELIZA was created, and implements
+our own Eliza strategies to respond to human's natural language.
+
 The implemented Eliza strategies:
 1) Ask questions of the form “Do you like to x” where x is the 
 infinitive form of a verb in the user’s early input
@@ -7,6 +15,9 @@ where x is the rephrased input from the user.
 3) Ask questions of the form “Why is ..x..?” where x is either a 
 combination of object and adjective or subject and adjective 
 or “Why ..prep.. the ..noun..”
+
+@author: Yuting, PJ, and Minh
+@date: 05/14/2021
 '''
 
 from dependency_parsing import *
