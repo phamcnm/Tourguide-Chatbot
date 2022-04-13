@@ -1,7 +1,7 @@
 # Koffee the Tour Guide
 
-### Co-Authors
- Yuting Su and Minh Pham
+### Authors
+ Yuting Su, Minh Pham, PJ Sangvong
 
 ## Samples
     (NAMED ENTITTY RECOGNITION)
