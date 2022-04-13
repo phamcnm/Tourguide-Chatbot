@@ -24,3 +24,4 @@ class Building:
         Generates fact(string) from the grammar json
         """
         return self.grammar.generate(start_symbol)
+        
