@@ -86,16 +86,12 @@ def find_adv_chunk(doc):
 	with a subject, a verb and an adverb
 	"""
 	for noun_chunk in doc.noun_chunks:
-		# print("noun_chunk is {}".format(noun_chunk))
 		if noun_chunk.root.dep_ != 'nsubj':
 			continue
 		subj = noun_chunk.root
 		if subj.head.dep_ == 'ROOT':
 			verb = subj.head
-			# print("verb is {}".format(verb))
 			for child in verb.children:
-				# print("child is {}".format(child))
-				# print("child dep is {}".format(child.dep_))
 				if child.dep_ == "advmod":
 					adverb = child
 					adverb_chunk = {

@@ -9,6 +9,7 @@ Parses and generates grammar for koffee
 import json
 import random
 import sys
+
 class NonterminalSymbol:
 	def __init__(self):
 		self.rules = [] # list of ProductionRules
@@ -128,7 +129,7 @@ class Grammar:
 	def generate(self, start_symbol):
 		"""
 		Generates text based on the grammar loaded and stored in this program.
-		It usses the get_string_from_production_rule() as a helper function
+		It uses the get_string_from_production_rule() as a helper function
 		
 		Parameters: 
 		start_symbol: a string to start the sentence

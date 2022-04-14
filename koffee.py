@@ -36,7 +36,6 @@ import tensorflow as tf
 import logging
 tf.get_logger().setLevel(logging.ERROR) # surpresses error when calling dialogtag_model.predict_tag
 
-
 from dialog_tag import DialogTag
 from profanity import profanity
 from textblob import TextBlob
@@ -48,6 +47,31 @@ import random
 import spacy
 import time
 import re
+
+
+def print_text_art():
+    print("\n")
+    print("//////////////////////////////////////////////////////////////////////////////////////////////////////")
+    print("//////////////////////////////////////////////////////////////////////////////////////////////////////")
+    print("////                                                                                              ////")
+    print("////                                                                                              ////")
+    print("////                                                                                              ////")
+    print("////     KK       KK       OOOOO        FFFFFFFFFFF   FFFFFFFFFFF   EEEEEEEEEEE   EEEEEEEEEEE     ////")
+    print("////     KK     KK       O       O      FF            FF            EE            EE              ////")
+    print("////     KK   KK       OO         OO    FF            FF            EE            EE              ////")
+    print("////     KK KK        OO           OO   FF            FF            EE            EE              ////")
+    print("////     KKKK         OO           OO   FFFFFFFFFFF   FFFFFFFFFFF   EEEEEEEEEEE   EEEEEEEEEEE     ////")
+    print("////     KK KK        OO           OO   FF            FF            EE            EE              ////")
+    print("////     KK   KK       OO         OO    FF            FF            EE            EE              ////")
+    print("////     KK     KK       O       O      FF            FF            EE            EE              ////")
+    print("////     KK       KK       OOOOO        FF            FF            EEEEEEEEEEE   EEEEEEEEEEE     ////")
+    print("////                                                                                              ////")
+    print("////                                                                                              ////")
+    print("////                                                                                              ////")
+    print("//////////////////////////////////////////////////////////////////////////////////////////////////////")
+    print("//////////////////////////////////////////////////////////////////////////////////////////////////////")
+    print("\n")
+
 
 # initialize models
 koffee_grammar = Grammar('./koffee_response/koffee.json')
@@ -87,35 +111,11 @@ is_intro = True
 told_funfact = False
 
 
-def print_text_art():
-    print("\n")
-    print("////////////////////////////////////////////////////////////////////////////////////////////////////////")
-    print("////////////////////////////////////////////////////////////////////////////////////////////////////////")
-    print("/////                                                                                              /////")
-    print("/////                                                                                              /////")
-    print("/////                                                                                              /////")
-    print("/////     KK       KK       OOOOO        FFFFFFFFFFF   FFFFFFFFFFF   EEEEEEEEEEE   EEEEEEEEEEE     /////")
-    print("/////     KK     KK       O       O      FF            FF            EE            EE              /////")
-    print("/////     KK   KK       OO         OO    FF            FF            EE            EE              /////")
-    print("/////     KK KK        OO           OO   FF            FF            EE            EE              /////")
-    print("/////     KKKK         OO           OO   FFFFFFFFFFF   FFFFFFFFFFF   EEEEEEEEEEE   EEEEEEEEEEE     /////")
-    print("/////     KK KK        OO           OO   FF            FF            EE            EE              /////")
-    print("/////     KK   KK       OO         OO    FF            FF            EE            EE              /////")
-    print("/////     KK     KK       O       O      FF            FF            EE            EE              /////")
-    print("/////     KK       KK       OOOOO        FF            FF            EEEEEEEEEEE   EEEEEEEEEEE     /////")
-    print("/////                                                                                              /////")
-    print("/////                                                                                              /////")
-    print("/////                                                                                              /////")
-    print("////////////////////////////////////////////////////////////////////////////////////////////////////////")
-    print("////////////////////////////////////////////////////////////////////////////////////////////////////////")
-    print("\n")
-
-
 def koffee_print(string):
     '''
     Prints koffee's responses
     '''
-    time.sleep(1.3)
+    time.sleep(0.5)
     string_list = string.split(" ")
     charCount = 0
 
@@ -128,7 +128,7 @@ def koffee_print(string):
         print(string_list[i], end=" ")
         charCount += len(string_list[i])
     print()
-    time.sleep(1)
+    time.sleep(0.5)
 
 
 def user_print():
@@ -156,9 +156,9 @@ def cap_first_character(string):
 given_winter_fact = False
 given_polar_vortex_fact = False
 given_spring_fact = False
-winter_keyphrase = {"winter", "cold", "snow"}
+winter_keyphrase = {"winter", "cold", "snow", "ski", "skate", "ice"}
 polar_vortex_keyphrase = {"polar", "vortex", "steven", "poskanzer", "steve"}
-spring_keyphrase = {"spring", "music", "tradition"}
+spring_keyphrase = {"spring", "music", "tradition", "beautiful", "tennis"}
 
 def check_keyphrase(response_string):
     """
@@ -175,25 +175,26 @@ def check_keyphrase(response_string):
     string_list = response_string.lower().split(" ")
     for word in string_list:
         word = remove_symbol_from_string(word) # removes fullstop, comma, colon, etc
+
         if not given_winter_fact and word in winter_keyphrase:
             koffee_print(koffee_grammar.generate("funFactIntro") + " {}. ".format(word.lower()) + koffee_grammar.generate("winterFunFact"))
             given_winter_fact = True
             told_funfact = True
-            time.sleep(2)
+            time.sleep(1)
             return
 
         elif not given_polar_vortex_fact and word in polar_vortex_keyphrase:
             koffee_print(koffee_grammar.generate("funFactIntro") + " {}. ".format(word.lower()) + koffee_grammar.generate("polarVortexFunFact"))
             given_polar_vortex_fact = True
             told_funfact = True
-            time.sleep(2)
+            time.sleep(1)
             return
 
         elif not given_spring_fact and word in spring_keyphrase:
             koffee_print(koffee_grammar.generate("funFactIntro") + " {}. ".format(word.lower()) + koffee_grammar.generate("sprintFunFact"))
             given_spring_fact = True
             told_funfact = True
-            time.sleep(2)
+            time.sleep(1)
             return
             
 
@@ -216,7 +217,7 @@ class Response:
         self.ner = [(ent.text, ent.label_) for ent in doc.ents]
 
         is_profanity = profanity.contains_profanity(response_string)
-        if(is_profanity):
+        if (is_profanity):
             koffee_print(koffee_grammar.generate("profanityResponse"))
 
         # only checks keyphrase when the bot is not doing an intro
@@ -252,17 +253,18 @@ def initialize_buiildings():
 
 
 # major phrases varaibles
-cs_phrases = {"cs", "computer", "programming", "coding"}
-psychology_phrases = {"psyc", "psychology"}
-physics_phrases = {"physic", "physics"}
-astronomy_phrases = {"astronomy"}
-maths_phrases = {"math", "maths", "mathematics", "mathematic"}
-statistics_phrases = {"stat", "statistic", "statisitcs"}
+cs_phrases = {"cs", "computer", "programming", "coding", "ai", "nlp", "blockchain"}
+psychology_phrases = {"psyc", "psychology", "brain", "brains", "thoughts"}
+physics_phrases = {"physics", "quantum", "gravity", "matters"}
+astronomy_phrases = {"astronomy", "universe"}
+maths_phrases = {"math", "maths", "mathematics", "mathematic", "numbers"}
+statistics_phrases = {"stat", "statistic", "statisitcs", "data"}
 biology_phrases = {"bio", "biology", "med", "premed", "medicine"}
 chemistry_phrases = {"chem", "chemistry"}
 cams_phrases = {"cams", "cinema", "media", "film", "production", "movie", "movies", "films"}
-music_phrases = {"music", "musics"}
-dance_phrases = {"dance"}
+music_phrases = {"music", "musics", "composition", "singing", "piano"}
+dance_phrases = {"dance", "kpop", "ballet", "hiphop"}
+
 def update_major_on_string(response_string):
     global major
     global start_building
@@ -293,7 +295,6 @@ def update_major_on_string(response_string):
             major = "Astronomy"
             start_building = "olin"   
             return
-
         elif word in maths_phrases:
             major = "Maths"
             start_building = "cmc" 
@@ -302,7 +303,6 @@ def update_major_on_string(response_string):
             major = "Statistics"
             start_building = "cmc" 
             return      
-             
         elif word in biology_phrases:
             major = "Biology"
             start_building = "anderson"
@@ -311,7 +311,6 @@ def update_major_on_string(response_string):
             major = "Chemistry"
             start_building = "anderson"
             return
-
         elif word in cams_phrases:
             major = "Cinema and Media Studies"
             start_building = "weitz"
@@ -380,9 +379,8 @@ sentiment_questions = [
     "How do you like the weather here?",
     "How do you feel about snow?",
     "How do you feel about living in a dorm?",
-    "What do you think about college life?",
-    "How are you feeling?",
-    "How is the tour so far?"
+    "How are you feeling so far?",
+    "How do you feel about being away from home?"
 ]
     
 eliza_questions = [
@@ -404,6 +402,7 @@ yesno_questions = [
 yes_tags = ["Yes answers", "Affirmative non-yes answers"]
 no_tags = ["No answers", "Negative non-no answers"]
 small_talk_questions = [("SENTIMENT", sentiment_questions), ("ELIZA", eliza_questions), ("YESNO", yesno_questions)]
+
 def small_talk():
     global small_talk_questions
     global yes_tags
@@ -443,6 +442,7 @@ def small_talk():
 
 
 user_question_keywords = ["workload", "trisemester", "career", "core curriculum", "internet", "food"]
+
 def user_question(response_string):
     """
     Prints a response to the user's "question" if the response string contains any string in user_question_keywords
@@ -470,7 +470,7 @@ def introduction_conversation():
     global current_building
     global is_intro
 
-    koffee_print("Hi I'm Koffee, your tour guide for today. Welcome to Carleton! What's your name?")
+    koffee_print("Hi I'm Koffee. I'm your tour-guide today. Welcome to Carleton College! What's your name?")
     response = user_print()
     for ent in response.ner:
         if ent[1] == "PERSON":
@@ -541,15 +541,15 @@ def visit_building(building):
 
     if building.name == majors_building_dict[major.lower()]:
         koffee_print("This building may interest you! It is a building for {}.".format(cap_first_character(major)))
-        time.sleep(0.6)
+        time.sleep(0.5)
 
     # use start_building, which is filled in introduction_conversation()
     building_components = ["majors", "offices", "funFact"]
     koffee_print(building.generate_fact("introduction"))
     
-    time.sleep(1.5)
+    time.sleep(1.1)
     koffee_print(building.generate_fact("features"))
-    time.sleep(1.9)
+    time.sleep(1.1)
 
     another_component = random.choice(building_components)
     if another_component.lower() == "funfact":
@@ -570,6 +570,7 @@ def visit_building(building):
 told_baldSpot = False
 told_careerCenter = False
 told_chapel = False
+
 def transition():
     """
     Prints updates on where the user is heading. Also prints facts about bald spot, career center, or chapel based on
@@ -587,15 +588,15 @@ def transition():
     cap_current = cap_first_character(current_building)
     cap_previous = cap_first_character(previous_building)
 
-    time.sleep(1)
+    time.sleep(0.5)
     if previous_lower == "":
         print("...Walking towards {}...".format(cap_current))
     else:
         print("...Walking from {} to {}...".format(cap_previous, cap_current))
 
-    time.sleep(1.4)
+    time.sleep(0.5)
     small_talk()
-    time.sleep(1.2)
+    time.sleep(0.5)
     # if walk from sayles or towards sayles or towards weitz(but not from olin or anderson)
     if not told_baldSpot and (previous_lower == "sayles" or (current_lower == "sayles" and previous_lower != "") or 
         (current_lower == "weitz" and (previous_lower != "olin" or previous_lower != "anderson"))):
@@ -615,9 +616,9 @@ def transition():
         koffee_print(koffee_grammar.generate("careerCenterStory"))
         told_careerCenter = True
 
-    time.sleep(1.4)
+    time.sleep(0.5)
     print("...Arrived at {}...".format(cap_current))
-    time.sleep(1.4)
+    time.sleep(0.5)
 
 
 def feedback():
